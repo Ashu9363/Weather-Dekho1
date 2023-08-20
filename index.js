@@ -6,11 +6,11 @@ const port = process.env.PORT || 3000; // Use the environment port or default to
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/home', (req, res) => {
+app.get('/Weather-Dekho/home', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
   });
   
-  app.get('/about', (req, res) => {
+  app.get('/Weather-Dekho/about', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'about.html'));
   });
 
