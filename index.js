@@ -7,12 +7,12 @@ const port = process.env.PORT || 3000; // Use the environment port or default to
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/home', (req, res) => {
-  res.sendFile(path.join(__dirname,  'index.html'));
-});
-
-app.get('/about', (req, res) => {
-  res.sendFile(path.join(__dirname, 'about.html'));
-});
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  });
+  
+  app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'about.html'));
+  });
 
 app.get('*', (req, res) => {
   res.statusCode = 404;
